@@ -12,7 +12,7 @@ Certifique-se de ter os seguintes pré-requisitos instalados em seu sistema:
 3. Execute o seguinte comando para clonar o repositório:
 
    ```bash
-   git clone https://
+   git clone https://github.com/MacartyFabio/crud-laravel.git
    ```
 
 4. Após a conclusão, você terá uma cópia local do repositório em seu sistema.
