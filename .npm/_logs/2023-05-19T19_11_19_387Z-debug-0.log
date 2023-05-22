@@ -1,0 +1,313 @@
+0 verbose cli /usr/bin/node /usr/bin/npm
+1 info using npm@8.19.4
+2 info using node@v16.20.0
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 4ms
+5 timing config:load:file:/usr/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 1ms
+7 timing config:load:cli Completed in 3ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:project Completed in 14ms
+10 timing config:load:file:/var/www/.npmrc Completed in 0ms
+11 timing config:load:user Completed in 0ms
+12 timing config:load:file:/usr/etc/npmrc Completed in 0ms
+13 timing config:load:global Completed in 1ms
+14 timing config:load:validate Completed in 0ms
+15 timing config:load:credentials Completed in 1ms
+16 timing config:load:setEnvs Completed in 1ms
+17 timing config:load Completed in 29ms
+18 timing npm:load:configload Completed in 29ms
+19 timing npm:load:mkdirpcache Completed in 1ms
+20 timing npm:load:mkdirplogs Completed in 0ms
+21 verbose title npm install
+22 verbose argv "install"
+23 timing npm:load:setTitle Completed in 2ms
+24 timing config:load:flatten Completed in 4ms
+25 timing npm:load:display Completed in 5ms
+26 verbose logfile logs-max:10 dir:/var/www/.npm/_logs
+27 verbose logfile /var/www/.npm/_logs/2023-05-19T19_11_19_387Z-debug-0.log
+28 timing npm:load:logFile Completed in 8ms
+29 timing npm:load:timers Completed in 0ms
+30 timing npm:load:configScope Completed in 0ms
+31 timing npm:load Completed in 47ms
+32 timing arborist:ctor Completed in 1ms
+33 silly logfile done cleaning log files
+34 timing idealTree:init Completed in 175ms
+35 timing idealTree:userRequests Completed in 1ms
+36 silly idealTree buildDeps
+37 timing idealTree:#root Completed in 0ms
+38 timing idealTree:buildDeps Completed in 1ms
+39 timing idealTree:fixDepFlags Completed in 0ms
+40 timing idealTree Completed in 182ms
+41 timing arborist:ctor Completed in 0ms
+42 timing reify:loadTrees Completed in 269ms
+43 timing reify:diffTrees Completed in 9ms
+44 silly reify moves {}
+45 timing reify:retireShallow Completed in 1ms
+46 timing reify:createSparse Completed in 13ms
+47 timing reify:loadBundles Completed in 0ms
+48 silly audit bulk request {
+48 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+48 silly audit   '@babel/parser': [ '7.21.8' ],
+48 silly audit   '@esbuild/android-arm': [ '0.17.19' ],
+48 silly audit   '@esbuild/android-arm64': [ '0.17.19' ],
+48 silly audit   '@esbuild/android-x64': [ '0.17.19' ],
+48 silly audit   '@esbuild/darwin-arm64': [ '0.17.19' ],
+48 silly audit   '@esbuild/darwin-x64': [ '0.17.19' ],
+48 silly audit   '@esbuild/freebsd-arm64': [ '0.17.19' ],
+48 silly audit   '@esbuild/freebsd-x64': [ '0.17.19' ],
+48 silly audit   '@esbuild/linux-arm': [ '0.17.19' ],
+48 silly audit   '@esbuild/linux-arm64': [ '0.17.19' ],
+48 silly audit   '@esbuild/linux-ia32': [ '0.17.19' ],
+48 silly audit   '@esbuild/linux-loong64': [ '0.17.19' ],
+48 silly audit   '@esbuild/linux-mips64el': [ '0.17.19' ],
+48 silly audit   '@esbuild/linux-ppc64': [ '0.17.19' ],
+48 silly audit   '@esbuild/linux-riscv64': [ '0.17.19' ],
+48 silly audit   '@esbuild/linux-s390x': [ '0.17.19' ],
+48 silly audit   '@esbuild/linux-x64': [ '0.17.19' ],
+48 silly audit   '@esbuild/netbsd-x64': [ '0.17.19' ],
+48 silly audit   '@esbuild/openbsd-x64': [ '0.17.19' ],
+48 silly audit   '@esbuild/sunos-x64': [ '0.17.19' ],
+48 silly audit   '@esbuild/win32-arm64': [ '0.17.19' ],
+48 silly audit   '@esbuild/win32-ia32': [ '0.17.19' ],
+48 silly audit   '@esbuild/win32-x64': [ '0.17.19' ],
+48 silly audit   '@inertiajs/core': [ '1.0.7' ],
+48 silly audit   '@inertiajs/vue3': [ '1.0.7' ],
+48 silly audit   '@jridgewell/gen-mapping': [ '0.3.3' ],
+48 silly audit   '@jridgewell/resolve-uri': [ '3.1.0' ],
+48 silly audit   '@jridgewell/set-array': [ '1.1.2' ],
+48 silly audit   '@jridgewell/sourcemap-codec': [ '1.4.15', '1.4.14' ],
+48 silly audit   '@jridgewell/trace-mapping': [ '0.3.18' ],
+48 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+48 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+48 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+48 silly audit   '@tailwindcss/forms': [ '0.5.3' ],
+48 silly audit   '@vitejs/plugin-vue': [ '4.2.3' ],
+48 silly audit   '@vue/compiler-core': [ '3.3.4' ],
+48 silly audit   '@vue/compiler-dom': [ '3.3.4' ],
+48 silly audit   '@vue/compiler-sfc': [ '3.3.4' ],
+48 silly audit   '@vue/compiler-ssr': [ '3.3.4' ],
+48 silly audit   '@vue/reactivity': [ '3.3.4' ],
+48 silly audit   '@vue/reactivity-transform': [ '3.3.4' ],
+48 silly audit   '@vue/runtime-core': [ '3.3.4' ],
+48 silly audit   '@vue/runtime-dom': [ '3.3.4' ],
+48 silly audit   '@vue/server-renderer': [ '3.3.4' ],
+48 silly audit   '@vue/shared': [ '3.3.4' ],
+48 silly audit   'any-promise': [ '1.3.0' ],
+48 silly audit   anymatch: [ '3.1.3' ],
+48 silly audit   arg: [ '5.0.2' ],
+48 silly audit   asynckit: [ '0.4.0' ],
+48 silly audit   autoprefixer: [ '10.4.14' ],
+48 silly audit   axios: [ '1.4.0' ],
+48 silly audit   'balanced-match': [ '1.0.2' ],
+48 silly audit   'binary-extensions': [ '2.2.0' ],
+48 silly audit   'brace-expansion': [ '1.1.11' ],
+48 silly audit   braces: [ '3.0.2' ],
+48 silly audit   browserslist: [ '4.21.5' ],
+48 silly audit   'call-bind': [ '1.0.2' ],
+48 silly audit   'camelcase-css': [ '2.0.1' ],
+48 silly audit   'caniuse-lite': [ '1.0.30001488' ],
+48 silly audit   chokidar: [ '3.5.3' ],
+48 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+48 silly audit   'combined-stream': [ '1.0.8' ],
+48 silly audit   commander: [ '4.1.1' ],
+48 silly audit   'concat-map': [ '0.0.1' ],
+48 silly audit   cssesc: [ '3.0.0' ],
+48 silly audit   csstype: [ '3.1.2' ],
+48 silly audit   deepmerge: [ '4.3.1' ],
+48 silly audit   'delayed-stream': [ '1.0.0' ],
+48 silly audit   didyoumean: [ '1.2.2' ],
+48 silly audit   dlv: [ '1.1.3' ],
+48 silly audit   'electron-to-chromium': [ '1.4.402' ],
+48 silly audit   esbuild: [ '0.17.19' ],
+48 silly audit   escalade: [ '3.1.1' ],
+48 silly audit   'estree-walker': [ '2.0.2' ],
+48 silly audit   'fast-glob': [ '3.2.12' ],
+48 silly audit   fastq: [ '1.15.0' ],
+48 silly audit   'fill-range': [ '7.0.1' ],
+48 silly audit   'follow-redirects': [ '1.15.2' ],
+48 silly audit   'form-data': [ '4.0.0' ],
+48 silly audit   'fraction.js': [ '4.2.0' ],
+48 silly audit   'fs.realpath': [ '1.0.0' ],
+48 silly audit   fsevents: [ '2.3.2' ],
+48 silly audit   'function-bind': [ '1.1.1' ],
+48 silly audit   'get-intrinsic': [ '1.2.1' ],
+48 silly audit   glob: [ '7.1.6' ],
+48 silly audit   has: [ '1.0.3' ],
+48 silly audit   'has-proto': [ '1.0.1' ],
+48 silly audit   'has-symbols': [ '1.0.3' ],
+48 silly audit   inflight: [ '1.0.6' ],
+48 silly audit   inherits: [ '2.0.4' ],
+48 silly audit   'is-binary-path': [ '2.1.0' ],
+48 silly audit   'is-core-module': [ '2.12.1' ],
+48 silly audit   'is-extglob': [ '2.1.1' ],
+48 silly audit   'is-glob': [ '4.0.3' ],
+48 silly audit   'is-number': [ '7.0.0' ],
+48 silly audit   jiti: [ '1.18.2' ],
+48 silly audit   'laravel-vite-plugin': [ '0.7.7' ],
+48 silly audit   lilconfig: [ '2.1.0' ],
+48 silly audit   'lines-and-columns': [ '1.2.4' ],
+48 silly audit   'lodash.clonedeep': [ '4.5.0' ],
+48 silly audit   'lodash.isequal': [ '4.5.0' ],
+48 silly audit   'magic-string': [ '0.30.0' ],
+48 silly audit   merge2: [ '1.4.1' ],
+48 silly audit   micromatch: [ '4.0.5' ],
+48 silly audit   'mime-db': [ '1.52.0' ],
+48 silly audit   'mime-types': [ '2.1.35' ],
+48 silly audit   'mini-svg-data-uri': [ '1.4.4' ],
+48 silly audit   minimatch: [ '3.1.2' ],
+48 silly audit   mz: [ '2.7.0' ],
+48 silly audit   nanoid: [ '3.3.6' ],
+48 silly audit   'node-releases': [ '2.0.10' ],
+48 silly audit   'normalize-path': [ '3.0.0' ],
+48 silly audit   'normalize-range': [ '0.1.2' ],
+48 silly audit   nprogress: [ '0.2.0' ],
+48 silly audit   'object-assign': [ '4.1.1' ],
+48 silly audit   'object-hash': [ '3.0.0' ],
+48 silly audit   'object-inspect': [ '1.12.3' ],
+48 silly audit   once: [ '1.4.0' ],
+48 silly audit   'path-is-absolute': [ '1.0.1' ],
+48 silly audit   'path-parse': [ '1.0.7' ],
+48 silly audit   picocolors: [ '1.0.0' ],
+48 silly audit   picomatch: [ '2.3.1' ],
+48 silly audit   pify: [ '2.3.0' ],
+48 silly audit   pirates: [ '4.0.5' ],
+48 silly audit   postcss: [ '8.4.23' ],
+48 silly audit   'postcss-import': [ '15.1.0' ],
+48 silly audit   'postcss-js': [ '4.0.1' ],
+48 silly audit   'postcss-load-config': [ '4.0.1' ],
+48 silly audit   'postcss-nested': [ '6.0.1' ],
+48 silly audit   'postcss-selector-parser': [ '6.0.13' ],
+48 silly audit   'postcss-value-parser': [ '4.2.0' ],
+48 silly audit   'proxy-from-env': [ '1.1.0' ],
+48 silly audit   qs: [ '6.11.2' ],
+48 silly audit   'queue-microtask': [ '1.2.3' ],
+48 silly audit   'read-cache': [ '1.0.0' ],
+48 silly audit   readdirp: [ '3.6.0' ],
+48 silly audit   resolve: [ '1.22.2' ],
+48 silly audit   reusify: [ '1.0.4' ],
+48 silly audit   rollup: [ '3.22.0' ],
+48 silly audit   'run-parallel': [ '1.2.0' ],
+48 silly audit   'side-channel': [ '1.0.4' ],
+48 silly audit   'source-map-js': [ '1.0.2' ],
+48 silly audit   sucrase: [ '3.32.0' ],
+48 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+48 silly audit   tailwindcss: [ '3.3.2' ],
+48 silly audit   thenify: [ '3.3.1' ],
+48 silly audit   'thenify-all': [ '1.6.0' ],
+48 silly audit   'to-regex-range': [ '5.0.1' ],
+48 silly audit   'ts-interface-checker': [ '0.1.13' ],
+48 silly audit   'update-browserslist-db': [ '1.0.11' ],
+48 silly audit   'util-deprecate': [ '1.0.2' ],
+48 silly audit   vite: [ '4.3.8' ],
+48 silly audit   'vite-plugin-full-reload': [ '1.0.5' ],
+48 silly audit   vue: [ '3.3.4' ],
+48 silly audit   wrappy: [ '1.0.2' ],
+48 silly audit   yaml: [ '2.2.2' ]
+48 silly audit }
+49 verbose reify failed optional dependency /var/www/node_modules/fsevents
+50 silly reify mark deleted [ '/var/www/node_modules/fsevents' ]
+51 verbose reify failed optional dependency /var/www/node_modules/@esbuild/win32-x64
+52 silly reify mark deleted [ '/var/www/node_modules/@esbuild/win32-x64' ]
+53 verbose reify failed optional dependency /var/www/node_modules/@esbuild/win32-ia32
+54 silly reify mark deleted [ '/var/www/node_modules/@esbuild/win32-ia32' ]
+55 verbose reify failed optional dependency /var/www/node_modules/@esbuild/win32-arm64
+56 silly reify mark deleted [ '/var/www/node_modules/@esbuild/win32-arm64' ]
+57 verbose reify failed optional dependency /var/www/node_modules/@esbuild/sunos-x64
+58 silly reify mark deleted [ '/var/www/node_modules/@esbuild/sunos-x64' ]
+59 verbose reify failed optional dependency /var/www/node_modules/@esbuild/openbsd-x64
+60 silly reify mark deleted [ '/var/www/node_modules/@esbuild/openbsd-x64' ]
+61 verbose reify failed optional dependency /var/www/node_modules/@esbuild/netbsd-x64
+62 silly reify mark deleted [ '/var/www/node_modules/@esbuild/netbsd-x64' ]
+63 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-s390x
+64 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-s390x' ]
+65 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-riscv64
+66 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-riscv64' ]
+67 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-ppc64
+68 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-ppc64' ]
+69 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-mips64el
+70 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-mips64el' ]
+71 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-loong64
+72 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-loong64' ]
+73 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-ia32
+74 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-ia32' ]
+75 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-arm64
+76 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-arm64' ]
+77 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-arm
+78 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-arm' ]
+79 verbose reify failed optional dependency /var/www/node_modules/@esbuild/freebsd-x64
+80 silly reify mark deleted [ '/var/www/node_modules/@esbuild/freebsd-x64' ]
+81 verbose reify failed optional dependency /var/www/node_modules/@esbuild/freebsd-arm64
+82 silly reify mark deleted [ '/var/www/node_modules/@esbuild/freebsd-arm64' ]
+83 verbose reify failed optional dependency /var/www/node_modules/@esbuild/darwin-x64
+84 silly reify mark deleted [ '/var/www/node_modules/@esbuild/darwin-x64' ]
+85 verbose reify failed optional dependency /var/www/node_modules/@esbuild/darwin-arm64
+86 silly reify mark deleted [ '/var/www/node_modules/@esbuild/darwin-arm64' ]
+87 verbose reify failed optional dependency /var/www/node_modules/@esbuild/android-x64
+88 silly reify mark deleted [ '/var/www/node_modules/@esbuild/android-x64' ]
+89 verbose reify failed optional dependency /var/www/node_modules/@esbuild/android-arm64
+90 silly reify mark deleted [ '/var/www/node_modules/@esbuild/android-arm64' ]
+91 verbose reify failed optional dependency /var/www/node_modules/@esbuild/android-arm
+92 silly reify mark deleted [ '/var/www/node_modules/@esbuild/android-arm' ]
+93 timing reifyNode:node_modules/fsevents Completed in 41ms
+94 timing reifyNode:node_modules/@esbuild/win32-x64 Completed in 41ms
+95 timing reifyNode:node_modules/@esbuild/win32-ia32 Completed in 40ms
+96 timing reifyNode:node_modules/@esbuild/win32-arm64 Completed in 40ms
+97 timing reifyNode:node_modules/@esbuild/sunos-x64 Completed in 40ms
+98 timing reifyNode:node_modules/@esbuild/openbsd-x64 Completed in 40ms
+99 timing reifyNode:node_modules/@esbuild/netbsd-x64 Completed in 40ms
+100 timing reifyNode:node_modules/@esbuild/linux-s390x Completed in 40ms
+101 timing reifyNode:node_modules/@esbuild/linux-riscv64 Completed in 40ms
+102 timing reifyNode:node_modules/@esbuild/linux-ppc64 Completed in 40ms
+103 timing reifyNode:node_modules/@esbuild/linux-mips64el Completed in 41ms
+104 timing reifyNode:node_modules/@esbuild/linux-loong64 Completed in 40ms
+105 timing reifyNode:node_modules/@esbuild/linux-ia32 Completed in 40ms
+106 timing reifyNode:node_modules/@esbuild/linux-arm64 Completed in 40ms
+107 timing reifyNode:node_modules/@esbuild/linux-arm Completed in 40ms
+108 timing reifyNode:node_modules/@esbuild/freebsd-x64 Completed in 40ms
+109 timing reifyNode:node_modules/@esbuild/freebsd-arm64 Completed in 40ms
+110 timing reifyNode:node_modules/@esbuild/darwin-x64 Completed in 40ms
+111 timing reifyNode:node_modules/@esbuild/darwin-arm64 Completed in 40ms
+112 timing reifyNode:node_modules/@esbuild/android-x64 Completed in 40ms
+113 timing reifyNode:node_modules/@esbuild/android-arm64 Completed in 40ms
+114 timing reifyNode:node_modules/@esbuild/android-arm Completed in 40ms
+115 timing reify:unpack Completed in 43ms
+116 timing reify:unretire Completed in 0ms
+117 timing build:queue Completed in 5ms
+118 timing build:deps Completed in 6ms
+119 timing build Completed in 6ms
+120 timing reify:build Completed in 8ms
+121 timing reify:trash Completed in 8ms
+122 timing reify:save Completed in 71ms
+123 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 488ms
+124 timing auditReport:getReport Completed in 495ms
+125 silly audit report {}
+126 timing auditReport:init Completed in 0ms
+127 timing reify:audit Completed in 495ms
+128 timing reify Completed in 799ms
+129 silly ADD
+130 silly ADD
+131 silly ADD
+132 silly ADD
+133 silly ADD
+134 silly ADD
+135 silly ADD
+136 silly ADD
+137 silly ADD
+138 silly ADD
+139 silly ADD
+140 silly ADD
+141 silly ADD
+142 silly ADD
+143 silly ADD
+144 silly ADD
+145 silly ADD
+146 silly ADD
+147 silly ADD
+148 silly ADD
+149 silly ADD
+150 silly ADD
+151 timing command:install Completed in 812ms
+152 verbose exit 0
+153 timing npm Completed in 1001ms
+154 info ok
