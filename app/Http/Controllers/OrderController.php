@@ -36,14 +36,17 @@ class OrderController extends Controller
 
     public function store(Request $request)
     {
-        $order = new Order;
-        $order->delivery_date = $request->input('delivery_date');
-        $order->freight_value = str_replace(',','.',$request->input('freight_value'));
-        $order->user_id = auth()->user()->id;
+        try{
+            $order = new Order;
+            $order->delivery_date = $request->input('delivery_date');
+            $order->freight_value = str_replace(',','.',$request->input('freight_value'));
+            $order->user_id = auth()->user()->id;
+            $order->save();
 
-        $order->save();
-
-        return redirect()->route('orders.index');
+            return redirect()->route('orders.index')->with('success', 'Pedido salvo com sucesso.');;
+        }catch( \Exception $e){
+            return redirect()->back()->withErrors(['error' => 'Não foi possivel salvar o pedido.']);
+        }
     }
 
     public function import(Request $request)
@@ -99,41 +102,72 @@ class OrderController extends Controller
 
     public function exportToPDF()
     {
-        $orders = Order::all();
-        $pdf = new Dompdf();
-        $pdf->loadHtml(View::make('orders.export', compact('orders')));
-        $pdf->render();
-        $filename = 'pedidos.pdf';
-        return $pdf->stream($filename);
+        try {
+            $orders = Order::all();
+            $pdf = new Dompdf();
+            $pdf->loadHtml(View::make('orders.export', compact('orders')));
+            $pdf->render();
+            $filename = 'pedidos.pdf';
+            return $pdf->stream($filename);
+        }catch (\Exception $e){
+            return redirect()->back()->withErrors(['error' => 'Não foi possivel exportar o pedido.']);
+        }
     }
 
     public function show($id)
     {
-        $order = Order::find($id);
-        return view('orders.show', compact('order'));
+        try {
+            $order = Order::find($id);
+            if (!$order){
+                throw new \Exception();
+            }
+            return view('orders.show', compact('order'));
+        }catch (\Exception $e){
+            return redirect()->back()->withErrors(['error' => 'Não foi possivel encontrar o pedido.']);
+        }
     }
 
     public function edit($id)
     {
-        $order = Order::find($id);
-        return view('orders.edit', compact('order'));
+        try {
+            $order = Order::find($id);
+            if (!$order){
+                throw new \Exception();
+            }
+            return view('orders.edit', compact('order'));
+        }catch (\Exception $e){
+            return redirect()->back()->withErrors(['error' => 'Não foi possivel encontrar o pedido.']);
+        }
     }
 
     public function update(Request $request, $id)
     {
-        $order = Order::find($id);
-        $order->delivery_date = $request->input('delivery_date');
-        $order->freight_value = str_replace(',','.',$request->input('freight_value'));
-        $order->save();
+        try{
+            $order = Order::find($id);
+            if (!$order){
+                throw new \Exception('Não foi possivel encontrar o pedido.');
+            }
+            $order->delivery_date = $request->input('delivery_date');
+            $order->freight_value = str_replace(',','.',$request->input('freight_value'));
+            $order->save();
 
-        return redirect()->route('orders.index');
+            return redirect()->route('orders.index');
+        }catch (\Exception $e){
+            return redirect()->back()->withErrors(['error' => 'Não foi possivel atualizar o pedido.']);
+        }
     }
 
     public function destroy($id)
     {
-        $order = Order::find($id);
-        $order->delete();
-
-        return redirect()->route('orders.index');
+        try{
+            $order = Order::find($id);
+            if (!$order){
+                throw new \Exception('Não foi possivel encontrar o pedido.');
+            }
+            $order->delete();
+            return redirect()->route('orders.index');
+        }catch (\Exception $e){
+            return redirect()->back()->withErrors(['error' => 'Não foi possivel deletar o pedido.']);
+        }
     }
 }
