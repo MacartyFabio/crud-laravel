@@ -42,9 +42,10 @@ class OrderController extends Controller
             $order->delivery_date = $request->input('delivery_date');
             $order->freight_value = str_replace(',','.',$request->input('freight_value'));
             $order->user_id = auth()->user()->id;
-            $order->save();
-
-            return redirect()->route('orders.index')->with('success', 'Pedido salvo com sucesso.');;
+            if (!$order->save()){
+                throw new \Exception();
+            }
+            return redirect()->route('orders.index')->with('success', 'Pedido salvo com sucesso.');
         }catch( \Exception $e){
             return redirect()->back()->withErrors(['error' => 'Não foi possivel salvar o pedido.']);
         }
@@ -150,9 +151,10 @@ class OrderController extends Controller
             }
             $order->delivery_date = $request->input('delivery_date');
             $order->freight_value = str_replace(',','.',$request->input('freight_value'));
-            $order->save();
-
-            return redirect()->route('orders.index');
+            if (!$order->save()){
+                throw new \Exception();
+            }
+            return redirect()->route('orders.index')->with('success', 'Pedido alterado com sucesso.');
         }catch (\Exception $e){
             return redirect()->back()->withErrors(['error' => 'Não foi possivel atualizar o pedido.']);
         }
@@ -165,8 +167,11 @@ class OrderController extends Controller
             if (!$order){
                 throw new \Exception('Não foi possivel encontrar o pedido.');
             }
-            $order->delete();
-            return redirect()->route('orders.index');
+            if (!$order->delete()){
+                throw new \Exception();
+            }
+            return redirect()->route('orders.index')->with('success', 'Pedido deletado com sucesso.');
+
         }catch (\Exception $e){
             return redirect()->back()->withErrors(['error' => 'Não foi possivel deletar o pedido.']);
         }
