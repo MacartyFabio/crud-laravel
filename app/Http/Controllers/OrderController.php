@@ -13,9 +13,10 @@ class OrderController extends Controller
     {
         $search = $request->input('search');
         if (is_null($search)) {
-            $orders = Order::all();
-            return view('orders.index', compact('orders','search'));
+            $orders = Order::orderByDesc('id')->get();
+            return view('orders.index', compact('orders', 'search'));
         }
+
         $orders = Order::where(function ($query) use ($search) {
             $query->where('delivery_date', 'LIKE', '%' . $search . '%')
                 ->orWhere('freight_value', 'LIKE', '%' . $search . '%');
