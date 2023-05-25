@@ -64,7 +64,7 @@
                         @foreach ($orders as $order)
                             @if (!is_numeric($search) || $order->id == $search)
                                 <tr>
-                                    <td class="px-6 py-4 text-gray-500">
+                                    <td class="px-6 py-4 text-white">
                                         <a href="{{ route('orders.show', $order->id) }}">{{ $order->id }}</a>
                                     </td>
                                     <td class="px-6 py-4 text-gray-500">{{ \Carbon\Carbon::parse($order->delivery_date)->format('d/m/Y H:i:s') }}</td>
