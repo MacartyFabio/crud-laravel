@@ -80,7 +80,9 @@
                                     </td>
                                     <td class="px-6 py-4">
                                         <div class="flex justify-right">
-                                            <a href="{{ route('orders.edit', $order->id) }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-l">Editar</a>
+                                            <x-primary-button class="mr-2">
+                                                <a href="{{ route('orders.edit', $order->id) }}">Editar</a>
+                                            </x-primary-button>
                                             <form action="{{ route('orders.destroy', $order->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
