@@ -67,12 +67,7 @@ Certifique-se de ter os seguintes pré-requisitos instalados em seu sistema:
 
 4. Quando as migrações e as seeds forem concluídas, você terá o banco de dados configurado e preenchido.
 
-### Passo 5: Instale as dependências Node
-1. Já fora do container utilizando o command "exit":
-    ```bash
-      npm install && npm run watch
-    ```
-### Passo 6: Acesse o aplicativo
+### Passo 5: Acesse o aplicativo
 
 1. Abra o navegador da web.
 2. Acesse a seguinte URL:
@@ -85,7 +80,7 @@ Certifique-se de ter os seguintes pré-requisitos instalados em seu sistema:
 
 ativo.
 
-### Passo 7: Explorando o CRUD
+### Passo 6: Explorando o CRUD
 
 Agora que o aplicativo está instalado e em execução, você pode explorar as funcionalidades do CRUD:
 
