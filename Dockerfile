@@ -14,6 +14,10 @@ RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd sockets
 
 RUN usermod -u 1000 www-data
 
+# Install Node.js and npm
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
+RUN apt-get install -y nodejs
+
 WORKDIR /var/www
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -33,6 +37,10 @@ RUN apt-get update && apt-get install -y \
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd sockets
 
 RUN usermod -u 1000 www-data
+
+# Install Node.js and npm
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
+RUN apt-get install -y nodejs
 
 WORKDIR /var/www
 
