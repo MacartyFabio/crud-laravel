@@ -2,7 +2,9 @@
 
 namespace Tests\Feature\Controllers;
 
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Models\Order;
@@ -18,6 +20,8 @@ class OrderControllerTest extends TestCase
      */
     public function testOrderIndex()
     {
+        $user = User::factory()->create();
+        $this->actingAs($user);
         $response = $this->get('/orders');
 
         $response->assertStatus(200);
@@ -31,6 +35,8 @@ class OrderControllerTest extends TestCase
      */
     public function testOrderCreate()
     {
+        $user = User::factory()->create();
+        $this->actingAs($user);
         $response = $this->get('/orders/create');
 
         $response->assertStatus(200);
@@ -44,9 +50,12 @@ class OrderControllerTest extends TestCase
      */
     public function testOrderStore()
     {
+        $user = User::factory()->create();
+        $this->actingAs($user);
         $data = [
             'delivery_date' => '2023-05-21',
             'freight_value' => 100.50,
+            'user_id' => $user->id
         ];
 
         $response = $this->post('/orders', $data);
@@ -63,7 +72,9 @@ class OrderControllerTest extends TestCase
      */
     public function testOrderShow()
     {
-        $order = Order::factory()->create();
+        $user = User::factory()->create();
+        $this->actingAs($user);
+        $order = Order::factory()->create(['user_id' => $user->id]);
 
         $response = $this->get('/orders/' . $order->id);
 
@@ -79,7 +90,9 @@ class OrderControllerTest extends TestCase
      */
     public function testOrderEdit()
     {
-        $order = Order::factory()->create();
+        $user = User::factory()->create();
+        $this->actingAs($user);
+        $order = Order::factory()->create(['user_id' => $user->id]);
 
         $response = $this->get('/orders/' . $order->id . '/edit');
 
@@ -95,7 +108,9 @@ class OrderControllerTest extends TestCase
      */
     public function testOrderUpdate()
     {
-        $order = Order::factory()->create();
+        $user = User::factory()->create();
+        $this->actingAs($user);
+        $order = Order::factory()->create(['user_id' => $user->id]);
 
         $data = [
             'delivery_date' => '2023-05-22',
@@ -116,12 +131,15 @@ class OrderControllerTest extends TestCase
      */
     public function testOrderDestroy()
     {
+        $user = User::factory()->create();
+        $this->actingAs($user);
         $order = Order::factory()->create();
 
         $response = $this->delete('/orders/' . $order->id);
 
         $response->assertStatus(302);
         $response->assertRedirect('/orders');
-        $this->assertDeleted($order);
+        $this->assertDatabaseMissing('orders', ['id' => $order->id]);
     }
+
 }
