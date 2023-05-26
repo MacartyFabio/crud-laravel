@@ -123,7 +123,7 @@ Isso encerrará e removerá os contêineres Docker associados ao aplicativo.
 
 Os testes serão executados e você poderá ver os resultados no terminal.
 
-### Passo 8: Encerrando os contêineres
+### Passo 7: Encerrando os contêineres
 
 Quando você terminar de usar o aplicativo, você pode encerrar os contêineres do Docker:
 
